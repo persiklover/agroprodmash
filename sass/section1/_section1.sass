@@ -1,0 +1,49 @@
+@import "header/header"
+@import "main"
+
+.section1
+  background: black url("../img/section1-bg.png") no-repeat center / cover
+  background-position: 2em top
+
+  font-size: 1rem
+  color: white
+
+  @media (min-width: 1920px)
+    font-size: 1.6rem
+
+  +xl
+    background-position: 13em top
+
+    font-size: 1.3rem
+  
+  +lg
+    background-position: 21% top
+
+  +md
+    font-size: .8rem
+  
+  +sm
+    background-image: url("../img/section1-bg-mobile.png")
+    background-position: right top
+  
+  +xxs
+    font-size: .575rem
+    background-position: -32em top
+  
+  &__title::before
+    display: none
+
+  &__main
+    margin-top: 5.8em
+    margin-left: 11.5em
+    margin-bottom: 15em
+
+    +sm
+      margin-top: 17em
+      margin-left: 0
+      margin-bottom: 8em
+  
+  &__scrolldown
+
+    +sm
+      display: none

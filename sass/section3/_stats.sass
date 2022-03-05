@@ -1,0 +1,238 @@
+@import "visitors"
+@import "icons"
+
+.stats
+  position: relative
+
+  +book
+  line-height: 1
+  text-align: left
+
+  +lg
+    font-size: .8rem
+  
+  +md
+    font-size: .58rem
+  
+  +sm
+    font-size: 1.25vw
+    padding-bottom: 10em
+  
+  +xs
+    font-size: 2vw
+
+  +xxs
+    font-size: 1.1em
+
+  &__icons
+    margin-top: 2.5em
+    margin-left: 12.5em
+
+    +sm
+      display: none
+
+  &-list
+    list-style: none
+    padding: 0
+    margin: 0
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    &-item
+      max-width: 100%
+      flex: auto
+      display: flex
+      margin-bottom: 2.5em
+
+      +sm
+        margin-bottom: 5.5em
+      
+      &:last-child
+        margin-bottom: 0
+      
+      .key
+        flex-shrink: 0
+
+        color: #262424
+        
+        font-size: 2em
+        font-weight: 400
+        text-transform: uppercase
+
+        +sm
+          font-size: 2.25em
+
+        +xs
+          margin-right: 1.5em
+
+          font-size: 1.5em
+
+        .heading
+          font-size: 3.1em
+
+        .number
+          letter-spacing: .05em
+
+      .val
+        position: absolute
+
+        +xs
+          font-size: .75em
+
+        &::before,
+        &::after
+          content: ''
+          display: block
+          position: absolute
+
+        &::after
+          background: no-repeat center / contain
+          
+        &::before
+          top:    -1.5em
+          bottom: -1.5em
+          left:   -2em
+          width:  1em
+          background: url("../img/group.png") no-repeat center / contain
+        
+        &__description
+          margin: 0
+
+          font-size: 1.8em
+
+          +xs
+            font-size: 2em
+
+            br
+              display: none
+      
+      &--1
+
+        .val
+          left: 40em
+          margin-left: -7.5em
+          margin-top:   1.5em
+
+          +sm
+            left: 19.5em
+            margin-left: 11em
+            margin-top:   6em
+          
+          +xs
+            margin-left: 8.5em
+          
+          &::after
+            width:   9.6em
+            height: 10.2em
+            background-image: url("../img/arrow1.png")
+            left: -12em
+            top:    1em
+
+            +sm
+              transform-origin: right bottom
+              transform: scale(.75, .75)
+              left: -12em
+              top:   -2em
+    
+      &--2
+        
+        .key
+          text-align: right
+
+          .heading
+            background-color: #82aa34
+            padding: .18em 0
+            margin-bottom: .05em
+            padding-left: .58em
+
+            font-size: 4.25em
+            line-height: .8
+        
+        .val
+          left: 40em
+          margin-left: 24.5em
+          margin-top:  -8.5em
+
+          +sm
+            width: 28em
+            left:  17em
+            margin-left:  14em
+            margin-top: 13.5em
+          
+          +xs
+            margin-left: 11.5em
+            margin-top: 12em
+
+          &::after
+            width: 41.3em
+            height:  15em
+            background-image: url("../img/arrow2.png")
+            left: -43.5em
+            top:     10em
+
+            +sm
+              transform-origin: right bottom
+              transform: scale(.75, .75)
+              width:   9.6em
+              height: 10.2em
+              background-image: url("../img/arrow1.png")
+              left: -11.5em
+              top:      -2em
+        
+      &--3
+
+        .key
+          font-size: 2.4em
+          color: #82aa34
+
+          .heading
+            font-size: 1.835em
+            word-spacing: .2em
+
+            +sm
+              font-size: 2.2em
+            
+            +xs
+              font-size: 1.5em
+          
+          .number
+            font-size: 2.35em
+        
+        .val
+          display: block
+          width: 48em
+          left: 46em
+          transform: translate(-50%, 0)
+          margin-top: 45em
+
+          text-align: center
+
+          +sm
+            width: 28em
+            left: 30.5em
+            margin-left:  14em
+            margin-top: 13.5em
+
+            text-align: left
+          
+          +xs
+            margin-left: 12em
+
+          &::after
+            width:  19.8em
+            height: 34.1em
+            background-image: url("../img/arrow3.png")
+            left: -22em
+            top:  -32em
+
+            +sm
+              transform-origin: right bottom
+              transform: scale(.75, .75)
+              width:   9.6em
+              height: 10.2em
+              background-image: url("../img/arrow1.png")
+              left: -11.5em
+              top:     -5em

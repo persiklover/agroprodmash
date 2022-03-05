@@ -1,0 +1,111 @@
+.nav
+  font-size: 1em
+  +book
+  font-weight: bold
+  letter-spacing: .05em
+
+  +sm
+    position: fixed
+    z-index: 9997
+    left: 50%
+    top:  0
+    height: 100vh
+
+    width: 540px
+
+    font-size: 5.85em;
+    font-weight: normal
+    line-height: 1.5;
+    letter-spacing: .1em;
+
+    transform: translateX(-180%)
+    will-change: transform
+
+    pointer-events: none
+
+    &.opened
+      transform: translateX(-50%)
+      
+      pointer-events: all
+  
+  +xs
+    width: 95%
+
+    font-size: 4.5em
+
+  &__list
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+
+    +sm
+      flex-direction: column
+      position: absolute
+      z-index: 9997
+      left: 0
+      top:  0
+      height: 100%
+
+      padding: 1.1em .4em
+      padding-right: 2em
+      background-color: #6eac1f
+    
+    +xs
+      padding: 1.4em .3em
+      padding-right: 1.5em
+    
+    +xxs
+      padding-top: 1.75em
+      padding-left: .5em
+
+    &::before
+      +sm
+        content: ''
+        display: block
+        position: absolute
+        right: 100%
+        top:   0
+        width:  100%
+        height: 100%
+        background-color: #6eac1f
+
+  &__item
+    display: flex
+
+    &:first-child::before
+      margin-left: 0
+
+    &::before
+      content: '//'
+      margin: 0 .5em
+
+      +sm
+        display: none
+    
+    a
+      position: relative
+
+      text-transform: uppercase
+
+      &:hover::before
+        transform: scaleX(0)
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        z-index: 9999
+        top:  100%
+        left: 0
+
+        width: 100%
+        height: .05em
+        background-color: currentColor
+
+        transform-origin: left
+        transition: transform .3s ease
+
+        +sm
+          margin-top: -.3em
+      

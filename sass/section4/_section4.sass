@@ -1,0 +1,103 @@
+.section4
+  position: relative
+  z-index: 0
+  background: black url("../img/section4-bg.png") no-repeat 70% center / contain
+
+  font-size: 1rem
+
+  @media (min-width: 1920px)
+    // background-position: 85% center
+
+    font-size: 1.6rem
+
+  +xl
+    font-size: 1.3rem
+  
+  +lg
+    background-position: right center
+  
+  +md
+    background-position: 20em center
+
+    font-size: .8rem
+
+  +sm
+    background-size: 120%
+    background-position: -3em bottom
+  
+  +xs
+    background-size: cover
+    background-position: -24em 4em
+  
+  +xxs
+    font-size: .575rem
+  
+  &::before
+    content: ''
+    display: none
+    position: absolute
+    z-index: -1
+    left: 0
+    top:  0
+    width: 100%
+    height: 30vh
+    background-image: linear-gradient(to bottom, black 45%, transparent)
+
+    +sm
+      display: block
+    
+    +xs
+      height: 15vh
+
+  .container
+    padding: 25em 0
+
+    +sm
+      padding-top: 7em
+      padding-bottom: 49em
+    
+    +xs
+      padding-top:   1.5em
+      padding-bottom: 38em  
+  
+  &__title
+    color: white
+  
+  &__bubble
+    position: relative
+    margin-left: 20em
+
+    &::before
+      content: ''
+      display: none
+      position: absolute
+      left: 7em
+      top:  100%
+      width:  30em
+      height: 27em
+      background: url("../img/bubble-arrow.png") no-repeat center / contain
+      transform-origin: left top
+
+      +sm
+        display: block
+      
+      +xs
+        transform: scale(.67, .67)
+        left: 2.1em
+
+    +lg
+      margin-left: 18em
+
+    +sm
+      max-width: 100%
+      margin: 0 auto
+      // margin-left: 0
+      width: 100%
+      background-color: white
+      padding: 10em 0
+
+      text-align: center
+    
+    +xs
+      padding: 5em 0
+  

@@ -1,0 +1,61 @@
+.links
+  list-style: none
+  padding: 0
+  width: 65em
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  +sm
+    width: 100%
+    padding: 0 2em
+  
+  +xs
+    padding: 0
+    width: 42em
+    max-width: 100%
+  
+  +xxs
+    padding: 0
+
+  &__item
+    font-size: 2.1em
+    +medium
+    font-weight: 500
+    line-height: 1.25
+    text-transform: uppercase
+    letter-spacing: 0.1em
+
+    +xs
+      font-size: 1.25em
+    
+    +xxs
+      font-size: 1.5em
+
+    &:nth-child(2n)::after
+      // visibility: hidden
+      display: none
+
+    &::after
+      content: '//'
+      margin: 0 .35em
+    
+    a
+      position: relative
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        bottom:  .1em
+        width: 100%
+        height: .05em
+        background-color: currentColor
+
+        transform-origin: left
+        transition: transform .2s ease-in
+        will-change: transform 
+
+      &:hover::before
+        transform: scaleX(0)

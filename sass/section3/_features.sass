@@ -1,0 +1,27 @@
+.features
+  list-style: none
+  padding: 0
+  width: 54em
+  display: inline-flex
+  flex-wrap: wrap
+  justify-content: center
+
+  color: #262424
+  +book
+  text-transform: uppercase
+  letter-spacing: 0.1em
+
+  +xs
+    width: 100%
+
+  &__item
+    font-size: 1.8em
+    flex-shrink: 0
+
+    &:last-child::after
+      display: none
+
+    &::after
+      content: '/'
+      display: inline-block
+      margin: 0 .25em

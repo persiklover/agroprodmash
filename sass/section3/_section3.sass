@@ -1,0 +1,117 @@
+@import "stats"
+@import "features"
+@import "event"
+
+.section3
+  position: relative
+  z-index: 0
+  background-color: #e9e9e9
+
+  color: #262424
+  font-size: 1rem
+  text-align: center
+
+  @media (min-width: 1920px)
+    // font-size: 1.6rem
+
+  +xl
+    // font-size: 1.3rem
+  
+  +md
+    font-size: .8rem
+
+  +xxs
+    font-size: .575rem
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    z-index: -1
+    left: 0
+    bottom: 21.5em
+    width:  100%
+    height: 46.5em
+    background-color: white
+
+    +xl
+      bottom: 21.5em
+
+    +md
+      bottom: 22em
+      height: 41em
+    
+    +sm
+      height: 23em
+      bottom: 0
+    
+    +xs
+      height: 13em
+
+  &__title
+    color: #212121
+
+    +xl
+      left: 30px
+
+  .container
+    overflow-x: hidden
+    padding-top:    10em
+
+    +sm
+      padding-left:  15px
+      padding-right: 15px
+
+  &__about
+    font-size: 1.6em
+    text-decoration: underline
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+    &:hover
+      text-decoration: none
+  
+  &__features
+    margin: 0
+
+  &__stats
+    margin: 1.7em 0
+    margin-left: 15em
+
+    +lg
+      margin-top: 3em
+
+    +sm
+      margin-left: 0
+    
+  &__event
+    margin-top:   5.5em
+    margin-bottom: .5em
+
+    +md
+      margin-top: 3.5em
+    
+    +sm
+      margin-top: 1em
+    
+    +xs
+      margin-bottom: 1.5em
+  
+  &__decor
+    display: block
+    margin: 0 auto
+    max-width: 100%
+    height: 38em
+
+    +xs
+      height: auto
+  
+  &__form-scroll
+    width: 23em
+    position: relative
+    margin-bottom: -5em
+    top: -12.75em
+
+    +xs
+      width: 90%
+      top: -7.5em

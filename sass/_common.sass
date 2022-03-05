@@ -1,0 +1,139 @@
+.section
+  position: relative
+
+  .container
+    position: relative
+    overflow-y: hidden
+
+    +sm
+      overflow-y: initial
+
+  &__title
+    overflow: visible
+    position: absolute
+    left: 15px
+    top:  9.75em
+    margin: 0
+    width: 6.5em
+
+    color: currentColor
+    +book
+    font-size: 1.5em
+    line-height: 1
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: 0.1em
+
+    opacity: .4
+
+    +sm
+      display: none
+
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+
+      margin: .75em 0
+      width:  .1rem
+      height: 300vh
+      background: currentColor
+
+    &::before
+      bottom: 100%
+
+    &::after
+      top:  100%
+  
+  &__scrolldown
+    position: absolute
+    z-index: 3
+    left: 50%
+    top:  100%
+    transform: translate(-50%, -50%)
+
+    width:  9.8em
+    height: 9.8em
+
+    img
+      width:  100%
+      height: 100%
+
+.btn
+  position: relative
+  display: inline-flex
+  justify-content: center
+  z-index: 0
+  background: none
+  padding: .7em 1.5em
+  border: none
+  
+  color: #f8f8f8
+  +bold
+  font-size: 1.8em
+  line-height: 1.2
+  text-decoration: underline
+  text-transform: uppercase
+  letter-spacing: 0.1em
+
+  cursor: pointer
+
+  &:hover::after
+    transform: skewX(-30deg) scaleX(0)
+
+  &::before,
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    z-index: -1
+    left: 0
+    top:  0
+    background-color: adjust-hue(lighten(#82aa34, 5), -10)
+    width:  100%
+    height: 100%
+
+    transform: skewX(-30deg)
+    transform-origin: center
+  
+  &::after
+    background-color: #82aa34
+
+    transition: transform .3s ease-in
+    will-change: transform
+
+.modal
+  position: fixed
+  z-index: 10000
+  left: 0
+  top:  0
+  width:  100%
+  height: 100%
+  display: flex
+  background-color: rgba(black, .5)
+
+  opacity: 0
+  transition: opacity .3s ease-in
+  will-change: opacity
+
+  pointer-events: none
+
+  &.active
+    opacity: 1
+    pointer-events: all
+  
+  &__content
+    width:  100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+#datakrat
+  width: 26.5em
+
+.registration_container
+  min-width: auto !important

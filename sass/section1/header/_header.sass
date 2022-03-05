@@ -1,0 +1,47 @@
+@import "lang"
+@import "nav"
+@import "menu-btn"
+
+.header
+  position: relative
+  display: flex
+  align-items: center
+  padding: 1.8em 0
+
+  color: #fefefe
+
+  +sm
+    align-items: flex-start
+    padding: 1.4em 0
+
+  &__lang
+    margin: 0 1.3em
+
+    +sm
+      margin: 0 4em
+      margin-top: .25em
+  
+  &__nav
+    margin-left: 2em
+
+    +sm
+      margin-left: 0
+  
+  &__menu-btn
+    position: relative
+    z-index: 9999
+    display: none
+
+    +sm
+      display: flex
+
+  &__logo
+    width: 9.6em
+
+    +sm
+      position: absolute
+      left: 0
+      top:  100%
+
+      margin-top: 1.5em
+      width: 12em

@@ -1,0 +1,61 @@
+$fonts: '../fonts/';
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: local('Futura PT Book'),
+       local('FuturaPT-Book'),
+       url($fonts+'FuturaPT-Book/FuturaPT-Book.woff2') format('woff2'),
+       url($fonts+'FuturaPT-Book/FuturaPT-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin book {
+  font-family: 'Futura PT Book', sans-serif;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: local('Futura PT Bold'),
+       local('FuturaPT-Bold'),
+       url($fonts+'FuturaPT-Bold/FuturaPT-Bold.woff2') format('woff2'),
+       url($fonts+'FuturaPT-Bold/FuturaPT-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin bold {
+  font-family: 'Futura PT', sans-serif;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Futura PT Extra';
+  src: local('Futura PT Extra Bold'),
+       local('FuturaPT-ExtraBold'),
+       url($fonts+'FuturaPT-ExtraBold/FuturaPT-ExtraBold.woff2') format('woff2'),
+       url($fonts+'FuturaPT-ExtraBold/FuturaPT-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin extra-bold {
+  font-family: 'Futura PT Extra', sans-serif;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: local('Futura PT Medium'),
+       local('FuturaPT-Medium'),
+       url($fonts+'FuturaPT-Medium/FuturaPT-Medium.woff2') format('woff2'),
+       url($fonts+'FuturaPT-Medium/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin medium {
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 500;
+}
